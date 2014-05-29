@@ -3,15 +3,14 @@ require 'spec_helper'
 
 describe 'User can view available courses' do
   let(:user) { FactoryGirl.create(:user) }
-  let(:course) { FactoryGirl.create(:course)}
 
   it 'shows a list of available courses' do
+    course = FactoryGirl.create(:course)
     login(user)
     click_link "Available Courses"
     expect(page).to have_content(course.title)
 
   end
-
 
   def login(user)
     visit "/signin"

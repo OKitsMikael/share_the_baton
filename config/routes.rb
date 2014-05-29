@@ -6,11 +6,15 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :users, except: [:index] do
-    resources :enrollments, except: [:update]
+    resources :enrollments, except: [:update, :create]
   end
 
   resources :sessions, only: [:create]
-  resources :courses, only: [:index, :show]
+
+  resources :courses, only: [:index, :show] do
+    resources :enrollments, only: [:create]
+  end
+
 
   get '/signin' => 'sessions#new'
   delete '/signout' => 'sessions#destroy'

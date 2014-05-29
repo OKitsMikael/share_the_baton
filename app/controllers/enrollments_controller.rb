@@ -1,29 +1,27 @@
 class EnrollmentsController < ApplicationController
   before_action :require_signin
+  before_action :find_enrollment, only: [:show, :destroy]
 
 
   def index
     @enrollments = current_user.enrollments
   end
 
-
-  def new
-    @enrollment = Enrollment.new(course_id: params[:course_id])
-  end
-
   def create
-    @enrollment = Enrollment.create(user_id: current_user.id, course_id: params[:course_id])
+    @enrollment = Enrollment.create(user: current_user, course_id: params[:course_id])
     redirect_to user_enrollments_path(current_user.id)
   end
 
   def show
-    @enrollment = Enrollment.find_by(id: params[:id])
   end
 
   def destroy
-    @enrollment = Enrollment.find_by(id: params[:id])
     @enrollment.destroy
     redirect_to user_enrollments_path(current_user.id)
   end
 
+  private
+    def find_enrollment
+      @enrollment = Enrollment.find_by(id: params[:id])
+    end
 end

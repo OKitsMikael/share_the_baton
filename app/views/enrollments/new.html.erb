@@ -1,9 +1,0 @@
-<h1>Confirm Enrollment</h1>
-<p>Are you sure you want to register for this course?</p>
-
-<%= form_tag(user_enrollments_path) do %>
-  <% label_tag :course_id %>
-  <% hidden_field_tag :course_id, value: @enrollment.course_id %>
-
-  <%= submit_tag "Confirm", id: "submit" %>
-<% end %>
