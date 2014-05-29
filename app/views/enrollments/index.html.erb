@@ -1,0 +1,7 @@
+<h1>My Enrollments</h1>
+<% @enrollments.each do |enrollment| %>
+  <%= enrollment.course.title %>
+  <%= link_to "View", user_enrollment_path(enrollment.user_id, enrollment.id) %>
+<% end %>
+
+<!-- course_path(enrollment.course.id) -->

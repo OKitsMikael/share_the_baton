@@ -1,0 +1,8 @@
+<h1><%= @user.name %></h1>
+
+<p><%= @user.email %></p>
+
+<%= link_to "Available Courses", courses_path %>
+<%= link_to "My Enrollments", user_enrollments_path(current_user.id) %>
+
+<p><%= link_to "Edit", edit_user_path(@user) %></p>
