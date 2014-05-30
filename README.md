@@ -17,7 +17,10 @@
 
 ### User Stories Completed
 
-* As a user I should land on a splash page for the site so that I have some idea of how to get started
+* As a user I can sign up for an account on the site
+* As a user I can log into my account
+* As a user I can view a list of available courses
+* As a user I can register for a course
 
 
 ### Backlog
