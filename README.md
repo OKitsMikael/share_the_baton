@@ -6,6 +6,8 @@
 
 **ShareTheBaton** is an educational web application designed to provide graduating nursing students with additional training that they might not get during a traditional degree program. It was developed as a sample Rails project for the April 2014 Web Development Immersive course at General Assembly. It was developed over a 4 day sprint to model the agile software development process.
 
+[Visit ShareTheBaton](http://mighty-chamber-6763.herokuapp.com/)
+
 ### Technologies Used
 
 * Ruby 2.1.1
