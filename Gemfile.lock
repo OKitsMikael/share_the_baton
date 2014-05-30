@@ -30,6 +30,13 @@ GEM
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
+    bitters (0.9.5)
+      bourbon (>= 3.1)
+      sass (>= 3.2)
+      thor
+    bourbon (3.2.3)
+      sass (~> 3.2)
+      thor
     builder (3.2.2)
     capybara (2.2.1)
       mime-types (>= 1.16)
@@ -127,11 +134,6 @@ GEM
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
     sass (3.2.19)
-    sass-rails (4.0.3)
-      railties (>= 4.0.0, < 5.0)
-      sass (~> 3.2.0)
-      sprockets (~> 2.8, <= 2.11.0)
-      sprockets-rails (~> 2.0)
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
@@ -173,6 +175,8 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt
+  bitters
+  bourbon
   capybara
   coffee-rails (~> 4.0.0)
   factory_girl_rails
@@ -187,7 +191,7 @@ DEPENDENCIES
   rails_12factor
   rb-readline
   rspec-rails (~> 2.14.0)
-  sass-rails (~> 4.0.3)
+  sass
   sdoc (~> 0.4.0)
   shoulda-matchers
   simplecov (~> 0.7.1)

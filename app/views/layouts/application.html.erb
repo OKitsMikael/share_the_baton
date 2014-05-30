@@ -8,10 +8,14 @@
 </head>
 <body>
 
-  <%= link_to "Home", root_path %>
-  <%= render 'common/signout' %>
+  <div class="banner" role="banner">
+    <%= link_to "Home", root_path %> |
+    <%= render 'common/signout' %>
+  </div>
 
-  <%= yield %>
+  <div class="main" role="main">
+    <%= yield %>
+  </div>
 
 </body>
 </html>

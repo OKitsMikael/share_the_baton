@@ -1,4 +1,6 @@
 <h1>My Enrollments</h1>
-<% @enrollments.each do |enrollment| %>
-  <p><%= link_to enrollment.course.title, user_enrollment_path(enrollment.user_id, enrollment.id) %></p>
-<% end %>
+<ul>
+  <% @enrollments.each do |enrollment| %>
+    <li><%= link_to enrollment.course.title, user_enrollment_path(enrollment.user_id, enrollment.id) %></li>
+  <% end %>
+</ul>
